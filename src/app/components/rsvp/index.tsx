@@ -16,7 +16,7 @@ export const RSVP = ({ darkMode }: { darkMode: boolean }) => {
           className="text-lg mb-12 max-w-2xl mx-auto"
           style={{ color: darkMode ? "#d1d5db" : "#4b5563" }}
         >
-          Please let us know if you'll be joining us for our special day.
+          Please let us know if you&apos;ll be joining us for our special day.
         </p>
         <div
           className="h-64 rounded-lg flex items-center justify-center"

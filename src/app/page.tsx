@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
       <div className="min-h-screen transition-all duration-500 bg-white dark:bg-gray-900">
-        <Nav />
+        <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <HeroSection />
         <Gallery />
         <OurStory darkMode={darkMode} />

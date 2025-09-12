@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export const Nav = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+interface IProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+export const Nav = ({ toggleDarkMode, darkMode }: IProps) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
@@ -19,7 +19,7 @@ export const Nav = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#66141D] to-[#D187AA] bg-clip-text text-transparent">
-            BT_Tales'25
+            BT_Tales&apos;25
           </div>
 
           {/* Desktop Navigation */}
