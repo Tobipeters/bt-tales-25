@@ -1956,6 +1956,83 @@ body {
 .parallax-bg {
   transition: transform 0.1s linear;
 }
+.page-header {
+  background: var(--gradient-primary);
+}
+
+.bank-container {
+  background: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.account-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease;
+}
+
+.account-card:hover {
+  box-shadow: var(--shadow-heavy);
+  transform: translateY(-2px);
+}
+
+.recommended-card {
+  border: 2px solid var(--primary-rose);
+  box-shadow: 0 0 0 1px rgba(209, 135, 170, 0.2), var(--shadow-heavy);
+}
+
+.recommended-badge {
+  background: var(--gradient-primary);
+}
+
+.account-header {
+  background: var(--gradient-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row {
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.detail-row:hover {
+  background: var(--bg-tertiary);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.icon-container {
+  background: var(--gradient-secondary);
+}
+
+.copy-button {
+  background: var(--gradient-warm);
+  border: 1px solid var(--border-accent);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--primary-rose);
+  color: var(--primary-burgundy);
+  transform: translateY(-1px);
+}
+
+.copy-success {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #059669;
+}
+
+.account-number {
+  font-family: "Courier New", monospace;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -2166,6 +2243,14 @@ body {
   .hero {
     min-height: 800px;
   }
+
+  /* .hero-background {
+    background: url("/mob-hero--bg.jpg");
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    background-size: ;
+    background-position: center ;
+  } */
 
   .hero-title {
     font-size: 2.5rem;
