@@ -1,34 +1,67 @@
-export const WeddingWishes = ({ darkMode }: { darkMode: boolean }) => {
+"use client";
+import { useState, useCallback } from "react";
+
+export const WeddingWishes = () => {
+  const initialValues = {};
+  const [values, setValues] = useState(initialValues);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // const handleChange = useCallback((e) => {
+  //   const { name, value } = e.target;
+  //   setValues((prev) => ({ ...prev, [name]: value }));
+  // }, []);
+
+  // const handleSubmit = useCallback(
+  //   async (submitFn: () => void) => {
+  //     setIsSubmitting(true);
+  //     try {
+  //       await submitFn(values);
+  //       setValues(initialValues);
+  //     } catch (error) {
+  //       console.error("Form submission error:", error);
+  //     } finally {
+  //       setIsSubmitting(false);
+  //     }
+  //   },
+  //   [values, initialValues]
+  // );
+
+  const reset = useCallback(() => {
+    setValues(initialValues);
+  }, [initialValues]);
+
   return (
-    <section
-      id="wishes"
-      className="py-20 px-4 transition-colors duration-300"
-      style={{ backgroundColor: darkMode ? "#1f2937" : "#f9fafb" }}
-    >
-      <div className="max-w-7xl mx-auto text-center">
-        <h2
-          className="text-4xl md:text-5xl font-light mb-6"
-          style={{ color: "var(--foreground)" }}
-        >
-          Wedding Wishes
-        </h2>
-        <p
-          className="text-lg mb-12 max-w-2xl mx-auto"
-          style={{ color: darkMode ? "#d1d5db" : "#4b5563" }}
-        >
-          Share your love and well wishes with us as we begin this new chapter.
-        </p>
-        <div
-          className="h-64 rounded-lg flex items-center justify-center"
-          style={{
-            background: `linear-gradient(135deg, 
-                     ${darkMode ? "var(--primary)" : "var(--primary)"}20, 
-                     ${darkMode ? "var(--secondary)" : "var(--secondary)"}20)`,
-          }}
-        >
-          <p className="text-lg" style={{ color: "var(--foreground)" }}>
-            Wishes Slider & Form - Coming Next
-          </p>
+    <section id="wishes" className="wishes">
+      <div className="container">
+        <h2 className="section-title">Wedding Wishes</h2>
+        <div className="wishes-content">
+          <div className="wishes-display">
+            <div className="wish-carousel" id="wishCarousel"></div>
+          </div>
+          <form className="wish-form" id="wishForm">
+            <h3>Leave Your Wishes</h3>
+            <div className="form-group">
+              <input
+                type="text"
+                id="wishName"
+                name="wishName"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                id="wishMessage"
+                name="wishMessage"
+                placeholder="Your wedding wishes for Boluwatife & Oluwatobi..."
+                rows={4}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn">
+              Send Wishes
+            </button>
+          </form>
         </div>
       </div>
     </section>

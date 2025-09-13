@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/hooks/useThrottle.jsx", "src/app/hooks/useNavigation.jsx", "src/app/hooks/useTheme.jsx", "src/app/hooks/useWishes.jsx"],
   "exclude": ["node_modules"]
 }

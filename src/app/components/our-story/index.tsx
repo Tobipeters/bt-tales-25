@@ -1,35 +1,52 @@
-export const OurStory = ({ darkMode }: { darkMode: boolean }) => {
+"use client";
+
+export const OurStory = () => {
   return (
-    <section
-      id="story"
-      className="py-20 px-4 transition-colors duration-300"
-      style={{ backgroundColor: "var(--background)" }}
-    >
-      <div className="max-w-7xl mx-auto text-center">
-        <h2
-          className="text-4xl md:text-5xl font-light mb-6"
-          style={{ color: "var(--foreground)" }}
-        >
-          Our Story
-        </h2>
-        <p
-          className="text-lg mb-12 max-w-2xl mx-auto"
-          style={{ color: darkMode ? "#d1d5db" : "#4b5563" }}
-        >
-          The beautiful journey of how our love story began and flourished into
-          forever.
-        </p>
-        <div
-          className="h-64 rounded-lg flex items-center justify-center"
-          style={{
-            background: `linear-gradient(135deg, 
-                     ${darkMode ? "var(--primary)" : "var(--primary)"}20, 
-                     ${darkMode ? "var(--secondary)" : "var(--secondary)"}20)`,
-          }}
-        >
-          <p className="text-lg" style={{ color: "var(--foreground)" }}>
-            4-Step Story Timeline - Coming Next
-          </p>
+    <section id="story" className="story">
+      <div className="container">
+        <h2 className="section-title">Our Love Story</h2>
+        <div className="story-timeline">
+          <div className="timeline-item">
+            <div className="timeline-icon">💕</div>
+            <div className="timeline-content">
+              <h3>First Met</h3>
+              <p>
+                Our paths crossed in the most unexpected way, and from that
+                moment, we knew there was something special about our
+                connection.
+              </p>
+            </div>
+          </div>
+          <div className="timeline-item">
+            <div className="timeline-icon">❤️</div>
+            <div className="timeline-content">
+              <h3>Fell in Love</h3>
+              <p>
+                Through shared dreams, laughter, and countless conversations, we
+                discovered that we were perfect complements to each other.
+              </p>
+            </div>
+          </div>
+          <div className="timeline-item">
+            <div className="timeline-icon">💍</div>
+            <div className="timeline-content">
+              <h3>The Proposal</h3>
+              <p>
+                Under the stars, with hearts full of love and dreams of forever,
+                Zacchaeus asked Ifunanya to be his wife, and she said YES!
+              </p>
+            </div>
+          </div>
+          <div className="timeline-item">
+            <div className="timeline-icon">👰‍♀️🤵‍♂️</div>
+            <div className="timeline-content">
+              <h3>Getting Married</h3>
+              <p>
+                Now we&apos;re ready to start our forever journey together, and we
+                can&apos;t wait to celebrate with our beloved family and friends.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
