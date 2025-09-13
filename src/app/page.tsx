@@ -10,20 +10,18 @@ import { Footer } from "./components/footer";
 import { GiftRegistery } from "./components/gift-registery";
 import { WeddingEvent } from "./components/wedding-event";
 import useCelebrationEffects from "./hooks/useCelebrationEffect";
+import useTheme from "./hooks/useTheme";
 
 export default function Home() {
   const celebrationContainerRef = useRef<HTMLDivElement | null>(null);
   const { createGoldenCascadeExplosion } = useCelebrationEffects(
     celebrationContainerRef
   );
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { theme } = useTheme();
+ 
 
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
+    <div className={` theme-${theme} wedding-app`}>
       {/* Celebration Animations Container  */}
       <div
         ref={celebrationContainerRef}
@@ -34,11 +32,11 @@ export default function Home() {
         <Nav />
         <HeroSection />
         <Gallery />
-        <OurStory  />
+        <OurStory />
         <WeddingEvent />
-        <RSVP  />
-        <GiftRegistery  />
-        <WeddingWishes  />
+        <RSVP />
+        <GiftRegistery />
+        <WeddingWishes />
         <Footer />
       </div>
 
