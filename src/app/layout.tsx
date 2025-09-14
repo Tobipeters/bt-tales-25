@@ -13,10 +13,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "#BT_Tales'25 - Boluwatife & Oluwatobi Wedding";
+const description =
+  "Join us to celebrate our big day, on the 13th November, 2025, In Lagos, Nigeria. Explore their love story, gallery, RSVP, and leave your wishes. #BT_Tales'25";
+
 export const metadata: Metadata = {
-  title: "#BT_Tales'25 - Boluwatife & Oluwatobi Wedding",
-  description:
-    "Join us to celebrate our big day, on the 13th November, 2025, In Lagos, Nigeria. Explore their love story, gallery, RSVP, and leave your wishes. #BT_Tales'25",
+  title,
+  description,
+  keywords:
+    "Love, BT_Tales'25, Wedding, Bolwatife and Oluwatobi Wedding, Event",
+  openGraph: {
+    title,
+    description,
+    images: ["/og-image.png"],
+    type: "website",
+  },
 };
 
 export default function RootLayout({

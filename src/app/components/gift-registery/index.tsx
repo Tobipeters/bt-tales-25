@@ -39,9 +39,7 @@ export const GiftRegistery = () => {
                   our nest together.
                 </p>
                 <p>
-                  <button onClick={handleOpen} className="btn">
-                    GIFT US
-                  </button>
+                  <button className="btn">GIFT US</button>
                 </p>
               </div>
               <div className="registry-item">
@@ -52,9 +50,7 @@ export const GiftRegistery = () => {
                   unforgettable memories.
                 </p>
                 <p>
-                  <button onClick={handleOpen} className="btn">
-                    GIFT US
-                  </button>
+                  <button className="btn">GIFT US</button>
                 </p>
               </div>
               <div className="registry-item">
@@ -65,9 +61,7 @@ export const GiftRegistery = () => {
                   future goals and dreams.
                 </p>
                 <p>
-                  <button onClick={handleOpen} className="btn">
-                    GIFT US
-                  </button>
+                  <button className="btn">GIFT US</button>
                 </p>
               </div>
             </div>

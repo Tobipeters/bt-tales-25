@@ -56,11 +56,11 @@ const Modal = ({
     }
   };
 
-  const handleBackdropClick = (e: any) => {
-    if (e.target === e.currentTarget && closable) {
-      handleClose();
-    }
-  };
+  // const handleBackdropClick = (e: any) => {
+  //   if (e.target === e.currentTarget && closable) {
+  //     handleClose();
+  //   }
+  // };
 
   const sizeClasses = {
     sm: "max-w-sm",
@@ -109,7 +109,7 @@ const Modal = ({
       className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop ${
         isAnimating ? "fade-in" : "fade-out"
       }`}
-      onClick={handleBackdropClick}
+      // onClick={handleBackdropClick}
     >
       <div
         className={`relative w-full ${sizeClasses[size]} modal-container ${variantClasses[variant]} rounded-2xl overflow-hidden ${animationClasses[animation]}`}
