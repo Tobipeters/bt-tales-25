@@ -544,7 +544,9 @@ body {
   left: 0;
   width: 100%;
   height: 100rem;
-  background: url("/hero-bg.JPG") bottom/cover;
+  background: url("/hero-bg.JPG");
+  background-position: center;
+  background-size: cover;
   animation: ken-burns 20s ease-in-out infinite alternate;
 }
 
@@ -2241,19 +2243,22 @@ body {
   }
 
   .hero {
-    min-height: 800px;
+    padding-top: 2rem;
   }
 
-  /* .hero-background {
-    background: url("/mob-hero--bg.jpg");
-    background-repeat: no-repeat;
-    aspect-ratio: 1;
-    background-size: ;
-    background-position: center ;
-  } */
+  .hero-content{
+    padding: 0 1rem;
+  }
+
+  .hero-background {
+    background-position: top center; /* focus on top part */
+    height: 100vh; /* reduce cropping */
+  }
 
   .hero-title {
     font-size: 2.5rem;
+    /* display: flex;
+    flex-direction: column; */
   }
 
   .ampersand {
