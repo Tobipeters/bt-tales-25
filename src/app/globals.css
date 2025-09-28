@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -1964,7 +1966,7 @@ body {
 
 .bank-container {
   background: var(--bg-secondary);
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .account-card {

@@ -144,6 +144,10 @@ export const RSVP = () => {
                 placeholder="Anything you like us to know about"
                 rows={4}
               ></textarea>
+
+              <small className="!font-semibold underline">
+                You will be routed to Whatsapp after you click the &apos;Send RSVP&apos;, please allow popup
+              </small>
             </div>
             <button type="submit" className="submit-btn">
               Send RSVP

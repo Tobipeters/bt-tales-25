@@ -106,7 +106,7 @@ const Modal = ({
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop ${
+      className={`fixed inset-0 z-[100000] flex items-center justify-center !p-4 modal-backdrop ${
         isAnimating ? "fade-in" : "fade-out"
       }`}
       // onClick={handleBackdropClick}
@@ -117,8 +117,8 @@ const Modal = ({
       >
         {/* Header */}
         {(title || showCloseButton) && (
-          <div className="modal-header px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+          <div className="modal-header !px-6 !py-4 flex items-center justify-between">
+            <div className="flex items-center gap-3">
               {getVariantIcon() && (
                 <div className="modal-icon">{getVariantIcon()}</div>
               )}
@@ -153,7 +153,7 @@ const Modal = ({
         </div>
 
         {/* Footer */}
-        {footer && <div className="modal-footer px-6 py-4">{footer}</div>}
+        {footer && <div className="modal-footer !px-6 !py-4">{footer}</div>}
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BankAccounttModal } from "../bank-accounts";
 import Modal from "../modal";
 
+const home_wishlist = "https://cdcareapp.page.link/c1t5";
+
 export const GiftRegistery = () => {
   const [showBank, setShowBank] = useState<boolean>(false);
 
@@ -13,9 +15,13 @@ export const GiftRegistery = () => {
     window.open(whatsappURL, "_blank");
   };
 
-  const handleOpen = () => {
-    console.log("clicked");
-    setShowBank(true);
+  const handleOpen = (type: string) => {
+    if (type === "home") {
+      window.open(home_wishlist, '_blank', )
+    } else {
+      // console.log("clicked");
+      setShowBank(true);
+    }
   };
 
   console.log({ showBank });
@@ -38,8 +44,10 @@ export const GiftRegistery = () => {
                   Kitchen appliances, bedding, and home decor to help us build
                   our nest together.
                 </p>
-                <p>
-                  <button className="btn">GIFT US</button>
+                <p className="flex justify-center w-full">
+                  <button onClick={() => handleOpen('home')} className="btn">
+                    GIFT US
+                  </button>
                 </p>
               </div>
               <div className="registry-item">
@@ -49,8 +57,10 @@ export const GiftRegistery = () => {
                   Contribute to our dream honeymoon and help us create
                   unforgettable memories.
                 </p>
-                <p>
-                  <button className="btn">GIFT US</button>
+                <p className="flex justify-center w-full">
+                  <button onClick={() => handleOpen('honeymoon')} className="btn">
+                    GIFT US
+                  </button>
                 </p>
               </div>
               <div className="registry-item">
@@ -60,8 +70,10 @@ export const GiftRegistery = () => {
                   Help us start our married life with contributions toward our
                   future goals and dreams.
                 </p>
-                <p>
-                  <button className="btn">GIFT US</button>
+                <p className="flex justify-center w-full">
+                  <button onClick={() => handleOpen('future')} className="btn">
+                    GIFT US
+                  </button>
                 </p>
               </div>
             </div>
@@ -80,6 +92,7 @@ export const GiftRegistery = () => {
 
       <Modal
         title="Account for Gift"
+        size="lg"
         isOpen={showBank}
         onClose={() => setShowBank(false)}
       >

@@ -4,32 +4,35 @@ import useGallery from "@/app/hooks/useGallery";
 const slides = [
   {
     src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1757732700/BT_Tales%2725/Copy_of_BoluTobi_169_of_180_Large_avldaj.jpg",
-    alt: "Wedding Photo 1"
+    alt: "Wedding Photo 1",
   },
   {
-    src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1757733807/BT_Tales%2725/IMG_2848_gjkmpy.heic",
-    alt: "Wedding Photo 2"
+    src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1759033518/BT_Tales%2725/IMG_2848_jog4by.jpg",
+    alt: "Wedding Photo 2",
   },
   {
     src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1757733075/BT_Tales%2725/1X4A1258_oeobkt.jpg",
-    alt: "Wedding Photo 3"
+    alt: "Wedding Photo 3",
   },
   {
     src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1757732701/BT_Tales%2725/Copy_of_BoluTobi_176_of_180_Large_mol8qp.jpg",
-    alt: "Wedding Photo 4"
+    alt: "Wedding Photo 4",
   },
   {
     src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1757733523/BT_Tales%2725/IMG_0496_m11hbe.jpg",
-    alt: "Wedding Photo 5"
-  }
+    alt: "Wedding Photo 5",
+  },
+  {
+    src: "https://res.cloudinary.com/diwkdbpq0/image/upload/v1759033463/BT_Tales%2725/IMG_2038_fyivxf.jpg",
+    alt: "Wedding Photo 6",
+  },
 ];
 
-
 export const Gallery = () => {
-  const { nextSlide, prevSlide,currentSlide, goToSlide  } = useGallery(slides);
+  const { nextSlide, prevSlide, currentSlide, goToSlide } = useGallery(slides);
 
   return (
-   <section id="gallery" className="gallery">
+    <section id="gallery" className="gallery">
       <div className="container">
         <h2 className="section-title">Our Gallery</h2>
         <div className="gallery-container">

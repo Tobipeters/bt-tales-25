@@ -43,7 +43,7 @@ export const BankAccounttModal = () => {
   return (
     <div className="bank-container">
       {/* Page Header */}
-      <div className="page-header py-8 px-6 text-center">
+      <div className="page-header !py-5 !px-4 lg:!px-5 text-center md:!py-7">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-4">
             <div className="p-4 bg-white/20 rounded-full">
@@ -53,14 +53,14 @@ export const BankAccounttModal = () => {
           <h1 className="text-2xl font-bold text-white mb-2">
             Choose Payment Account
           </h1>
-          <p className="text-white/80 text-sm max-w-md mx-auto">
+          <p className="text-white/80 text-sm max-w-md !mx-auto">
             Select any of the bank accounts below and copy the details for your
             payment
           </p>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto px-6 py-8">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="!w-full mx-auto !px-4 lg:!px-5 !py-5 lg:!py-7">
+        <div className="w-full grid gap-6 md:grid-cols-2">
           {bankOptions.map((account) => (
             <div
               key={account.id}
@@ -71,7 +71,7 @@ export const BankAccounttModal = () => {
               {/* Recommended Badge */}
               {account.recommended && (
                 <div className="absolute top-4 right-4 z-10">
-                  <div className="recommended-badge px-3 py-1 rounded-full">
+                  <div className="recommended-badge !px-3 py-1 rounded-full">
                     <span className="text-xs font-semibold text-white">
                       Recommended
                     </span>
@@ -80,9 +80,9 @@ export const BankAccounttModal = () => {
               )}
 
               {/* Account Header */}
-              <div className="account-header px-6 py-4">
-                <div className="flex items-center space-x-3">
-                  <div className="icon-container p-2 rounded-lg">
+              <div className="account-header !px-4 lg:!px-5 !py-4">
+                <div className="flex items-center gap-3">
+                  <div className="icon-container !p-2 rounded-lg">
                     <Building
                       size={20}
                       style={{ color: "var(--primary-burgundy)" }}
@@ -106,12 +106,12 @@ export const BankAccounttModal = () => {
               </div>
 
               {/* Account Details */}
-              <div className="p-6 space-y-0">
+              <div className="space-y-0">
                 {/* Account Name */}
-                <div className="detail-row px-3 py-4 rounded-lg">
+                <div className="detail-row !px-4 lg:!px-5 !py-4 rounded-0">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="icon-container p-2 rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <div className="icon-container !p-2 rounded-lg">
                         <User
                           size={16}
                           style={{ color: "var(--primary-burgundy)" }}
@@ -132,14 +132,14 @@ export const BankAccounttModal = () => {
                         </p>
                       </div>
                     </div>
-                    <button
+                    {/* <button
                       onClick={() =>
                         copyToClipboard(
                           account.accountName,
                           `name-${account.id}`
                         )
                       }
-                      className={`copy-button px-3 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 ${
+                      className={`copy-button !px-3 !py-2 rounded-lg text-xs font-medium flex items-center gap-1 ${
                         copiedField === `name-${account.id}`
                           ? "copy-success"
                           : ""
@@ -156,15 +156,15 @@ export const BankAccounttModal = () => {
                           <span>Copy</span>
                         </>
                       )}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
 
                 {/* Account Number */}
-                <div className="detail-row px-3 py-4 rounded-lg">
+                <div className="detail-row !px-4 lg:!px-5 !py-4 rounded-0">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="icon-container p-2 rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <div className="icon-container !p-2 rounded-lg">
                         <Hash
                           size={16}
                           style={{ color: "var(--primary-burgundy)" }}
@@ -192,7 +192,7 @@ export const BankAccounttModal = () => {
                           `number-${account.id}`
                         )
                       }
-                      className={`copy-button px-3 py-2 rounded-lg text-xs font-medium flex items-center space-x-1 ${
+                      className={`copy-button !px-3 !py-2 rounded-lg text-xs font-medium flex items-center gap-1 ${
                         copiedField === `number-${account.id}`
                           ? "copy-success"
                           : ""
@@ -218,9 +218,9 @@ export const BankAccounttModal = () => {
         </div>
 
         {/* Footer Instructions */}
-        <div className="mt-8 text-center">
+        <div className="!mt-5 text-center lg:!mt-8">
           <div
-            className="inline-block px-6 py-4 rounded-xl"
+            className="inline-block !px-4 lg:!px-5 !py-4 rounded-xl"
             style={{
               background: "var(--bg-primary)",
               border: "1px solid var(--border-color)",
