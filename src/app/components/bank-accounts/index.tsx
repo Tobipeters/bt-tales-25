@@ -24,9 +24,9 @@ export const BankAccounttModal = () => {
   const bankOptions = [
     {
       id: 1,
-      bankName: "GT Bank",
+      bankName: "Stanbic IBTC",
       accountName: "Boluwatife Sowo",
-      accountNumber: "0236375924",
+      accountNumber: "0072795157",
       accountType: "Savings Account",
       recommended: false,
     },
